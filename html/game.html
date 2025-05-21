@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Hello Kitty Tetris</title>
+  <link rel="stylesheet" href="../css/game.css">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Tela de Carregamento -->
+  <div id="loadingScreen" class="loading-screen">
+    <div class="loading-spinner"></div>
+    <h2>Hello Kitty Tetris</h2>
+    <p>Carregando diversão...</p>
+  </div>
+
+  <!-- Conteúdo Principal do Jogo -->
+  <div class="game-container">
+    <canvas id="gameCanvas" width="300" height="600"></canvas>
+
+    <div class="ui-panel">
+      <div class="score-box">
+        <span>SCORE</span>
+        <span id="score">0</span>
+      </div>
+      
+      <div class="next-box">
+        <span>NEXT</span>
+        <canvas id="nextCanvas" width="120" height="120"></canvas>
+      </div>
+      <div class="controls">
+        <button id="pauseBtn" class="control-btn">
+          <i class="fas fa-pause"></i> PAUSE
+        </button>
+        <button id="muteBtn" class="control-btn">
+          <i id="muteIcon" class="fas fa-volume-up"></i> SOUND
+        </button>
+        <button id="menuBtn1" class="control-btn">
+          <i class="fas fa-home"></i> MENU
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tela de Fim de Jogo -->
+  <div id="gameOverScreen" class="game-over-screen">
+    <div class="game-over-box">
+      <h2>Fim de Jogo</h2>
+      <p>Seu score: <span id="finalScore">0</span></p>
+      <button id="restartBtn" class="control-btn">Reiniciar</button>
+      <button id="menuBtn" class="control-btn">Menu</button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+</body>
+</html>
