@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello Kitty Tetris</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="menu-container">
+    <h1 class="title">Hello Kitty Tetris</h1>
+
+    <div class="button-group">
+      <button onclick="startGame()">Iniciar Jogo</button>
+      <button onclick="showModal('dedication')">Dedicatória</button>
+    </div>
+  </div>
+
+<!-- Modal de Pontuação -->
+<div id="scores-modal" class="modal hidden">
+  <div class="modal-content">
+    <h2>Top Pontuações</h2>
+    <pre id="scores-text" style="white-space: pre-wrap; text-align: center;"></pre>
+    <button onclick="hideModal()" class="modal-btn">Voltar</button>
+  </div>
+</div>
+
+  <!-- Modal de Dedicatória -->
+  <div id="dedication-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Dedicatória</h2>
+      <p id="dedication-text">Para a Mulher mais Linda do Mundo <3 </p>
+      <button onclick="hideModal()" class="modal-btn">Voltar</button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
